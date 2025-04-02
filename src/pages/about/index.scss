@@ -1,0 +1,47 @@
+.header{
+  height: 564rpx;
+}
+
+.content {
+  border-radius: 32rpx;
+  overflow: hidden;
+  position: relative;
+  margin-top: -32rpx;
+  padding: 48rpx 32rpx 0 32rpx;
+  background-color: #f6f3ec;
+
+  font-size: 28rpx;
+  line-height: 44rpx;
+  color: rgba(0, 0, 0, 0.9);
+  @include fontFamilyHanSerifSemi();
+
+  &::after {
+    content: '';
+    display: block;
+    height: constant(safe-area-inset-bottom);
+    height: env(safe-area-inset-bottom);
+    min-height: 68rpx;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 40rpx;
+    line-height: 56rpx;
+    margin-bottom: 24rpx;
+  }
+  .text {
+    white-space: pre-line;
+    text-align: justify;
+    margin-bottom: 24rpx;
+    line-height: 56rpx;
+    .indent {
+      min-height: 56rpx;
+    }
+  }
+  .img {
+    margin-bottom: 52rpx;
+  }
+  .video {
+    line-height: 0;
+    margin-bottom: 80rpx;
+  }
+}

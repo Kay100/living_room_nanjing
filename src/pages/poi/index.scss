@@ -1,0 +1,293 @@
+.header {
+  height: 564rpx;
+  position: relative;
+
+  swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .control {
+    width: 100%;
+    height: 200rpx;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    bottom: 0;
+  }
+  .progress-bar, .type-bar, .video-duration-time {
+    width: 106rpx;
+    height: 48rpx;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4rpx);
+    border-radius: 26rpx;
+    position: absolute;
+    right: 32rpx;
+    bottom: 64rpx;
+    color: #ffffff;
+    font-size: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      width: 24rpx;
+      height: 24rpx;
+      margin-right: 4rpx;
+    }
+  }
+  .type-bar {
+    width: 160rpx;
+    left: 50%;
+    bottom: 64rpx;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding: 0 22rpx;
+    justify-content: space-between;
+    &::after {
+      content: '';
+      width: 84rpx;
+      height: 100%;
+      background: #FFFFFF;
+      backdrop-filter: blur(4rpx);
+      border-radius: 26rpx;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      transition: left .3s;
+    }
+    &.current-1 {
+      .item {
+        &:nth-child(1) {
+          color: rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+    &.current-2 {
+      &::after {
+        left: 76rpx;
+      }
+      .item {
+        &:nth-child(2) {
+          color: rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+  }
+  .fullscreen {
+    width: 48rpx;
+    height: 48rpx;
+    position: absolute;
+    left: 32rpx;
+    bottom: 64rpx;
+  }
+  .video-duration-time {
+
+  }
+}
+
+.content {
+  border-radius: 32rpx;
+  background: #f6f3ec;
+  overflow: hidden;
+  position: relative;
+  top: -32rpx;
+  padding: 48rpx 32rpx 100rpx 32rpx;
+
+  font-size: 28rpx;
+  line-height: 44rpx;
+  color: rgba(0, 0, 0, 0.9);
+
+  .menu {
+    display: flex;
+    gap: 18rpx;
+    margin-bottom: 32rpx;
+    .menu-item {
+      flex: 1;
+      height: 92rpx;
+      line-height: 88rpx;
+      text-align: center;
+      color: #016a5d;
+      font-size: 32rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12rpx;
+      background-size: 100% 100%;
+      @include fontFamilyHanSerif();
+    }
+  }
+
+  .title {
+    font-size: 40rpx;
+    line-height: 56rpx;
+    margin-bottom: 32rpx;
+    @include fontFamilyHanSerif();
+  }
+  .text {
+    font-size: 28rpx;
+    line-height: 56rpx;
+    white-space: pre-line;
+    text-align: justify;
+    margin-bottom: 64rpx;
+    @include fontFamilyHanSerifSemi();
+  }
+  .img {
+    margin-bottom: 24rpx;
+  }
+  .video {
+    line-height: 0;
+    margin-bottom: 80rpx;
+  }
+
+  .audio {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 32rpx;
+
+    .audio-player {
+      height: 142rpx;
+      border-radius: 16rpx;
+      background-size: cover;
+      font-size: 28rpx;
+      padding-right: 16rpx;
+      display: flex;
+      align-items: center;
+
+      .audio-info {
+        padding-left: 40rpx;
+        flex: auto;
+
+        .flex {
+          display: flex;
+          line-height: 44rpx;
+          font-size: 28rpx;
+          margin-bottom: 8rpx;
+          justify-content: space-between;
+
+          .name {
+            font-weight: 600;
+            margin-right: 16rpx;
+          }
+          .time {
+            color: rgba(0, 0, 0, 0.35);
+            margin-right: 14rpx;
+          }
+        }
+        slider {
+          margin: 0 14rpx;
+        }
+      }
+
+      .btn {
+        width: 112rpx;
+        height: 112rpx;
+        margin-right: 24rpx;
+      }
+    }
+  }
+
+  .audios-wrapper {
+    margin-bottom: 64rpx;
+    .title {
+      margin-bottom: 48rpx;
+    }
+    .audio-item {
+      text-align: center;
+      background: #ffffff;
+      border-radius: 18rpx;
+      padding: 24rpx 32rpx;
+      line-height: 44rpx;
+      margin-bottom: 48rpx;
+      position: relative;
+
+      .audio-item-name {
+        font-weight: bold;
+        font-size: 32rpx;
+        @include fontFamilyHanSerifSemi();
+      }
+      .audio-control {
+        width: 50%;
+        padding: 16rpx 0;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16rpx;
+        color: rgba(0, 0, 0, 0.6);
+
+        .audio-btn {
+          width: 60rpx;
+          height: 60rpx;
+          background: rgba(40, 156, 141, 0.1);
+          border-radius: 20rpx;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .icon {
+            width: 32rpx;
+            height: 32rpx;
+          }
+        }
+      }
+      .audio-item-text {
+        font-size: 28rpx;
+        line-height: 56rpx;
+        @include fontFamilyHanSerifSemi();
+      }
+
+      &::before,
+      &::after {
+        width: calc(100% - 32rpx);
+        height: 36rpx;
+        border-radius: 18rpx;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 16rpx;
+        background-color: #ffffff;
+      }
+      &::before {
+        top: -16rpx;
+      }
+      &::after {
+        bottom: -16rpx;
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 84rpx;
+  border-top: 1rpx solid #e7e7e7;
+  box-sizing: content-box;
+  justify-content: space-around;
+  align-items: center;
+  background: #f7f3ec;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* 适配苹果底部安全区 */
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  .item {
+    width: 186rpx;
+    height: 84rpx;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 28rpx;
+    .icon,.icon-img {
+      margin-right: 8rpx;
+    }
+    .icon-img {
+      width: 38rpx;
+      height: 38rpx;
+    }
+  }
+}

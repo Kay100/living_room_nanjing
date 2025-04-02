@@ -1,0 +1,55 @@
+.mLoc-title {
+  height: 200rpx;
+  line-height: 200rpx;
+  width: 100%;
+  color: #D3D3D3;
+  text-align: center;
+}
+
+.mLoc-container {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  height: 400rpx;
+  text-align: center;
+}
+
+.mLoc-text {
+  position: absolute;
+  top: 40rpx;
+  text-align: center;
+  width: 100%;
+  font-size: 24rpx;
+}
+
+.mLoc-content {
+  margin-top: 40rpx;
+  font-size: 40rpx;
+  width: 100%;
+  height: 400rpx;
+  line-height: 400rpx; 
+}
+
+.mock-loc-btn {
+  width: 280rpx;
+  height: 80rpx;
+  border: 2rpx solid #eeeeee;
+  background: #19be6b;
+  border-radius: 10rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 40rpx auto;
+  color: #fff;
+}
+
+.clear-loc-btn {
+  width: 280rpx;
+  height: 80rpx;
+  border: 2rpx solid #dcdee2;
+  border-radius: 10rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  color: #515a6e;
+  background-color: #fff;
+}

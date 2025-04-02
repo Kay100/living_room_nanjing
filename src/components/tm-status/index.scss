@@ -1,0 +1,26 @@
+.#{$global-prefix}-status {
+  @include center-middle-flex;
+  align-items: flex-start;
+
+  &-fix {
+    @include size(100%, auto);
+  }
+  &-content {
+    animation: fadeIn 0.15s linear 1;
+    flex-direction: column;
+    @include center-middle-flex;
+    margin-top:300rpx;
+    image {
+      display: block;
+      width: 360rpx;
+      margin-bottom: $layout-padding;
+    }
+    p {
+      color: $text-light-color;
+      font-size: 26rpx;
+    }
+    .button {
+      margin-top: $layout-padding;
+    }
+  }
+}

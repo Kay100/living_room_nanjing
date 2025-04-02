@@ -1,0 +1,132 @@
+.border-top-map {
+  height: 2rpx;
+  width: 100%;
+  background-color: #e5e5e5;
+}
+
+#walk-map {
+  width: 100%;
+  height: 100vh;
+}
+
+.bottom-bar {
+  width: 688rpx;
+  height: 154rpx;
+  background-color: white;
+  border: 2rpx solid #e5e5e5;
+  border-radius: 16rpx;
+  position: fixed;
+  bottom: 15rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &.iphonex {
+    bottom: 56rpx;
+  }
+}
+
+.bottom-bar-iphoneX {
+  bottom: 54rpx;
+}
+
+.bottom-bar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-bar-pic {
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.bottom-bar-text {
+  margin-left: 18rpx;
+}
+
+.bottom-bar-text-title {
+  font-family: PingFangTC-Regular;
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 44rpx;
+  letter-spacing: 1px;
+}
+
+.bottom-bar-text-number {
+  font-family: PingFangSC-Semibold;
+  font-weight: bold;
+  font-size: 34rpx;
+  color: #333333;
+  line-height: 44rpx;
+  letter-spacing: 1px;
+}
+
+.btn-container {
+  width: 80rpx;
+  position: absolute;
+  height: 80rpx;
+  z-index: 2;
+  border-radius: 42rpx;
+  border: 1rpx solid rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2rpx 4rpx 0 rgba(0, 0, 0, 0.15);
+}
+
+.loc-btn-container {
+  bottom: 242rpx;
+  left: 40rpx;
+}
+
+.loc-btn-container-iphoneX {
+  bottom: 266rpx;
+  left: 40rpx;
+}
+
+.loc-icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.btn-icon {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.refresh-btn {
+  bottom: 370rpx;
+  right: 40rpx;
+}
+
+.refresh-btn-iphoneX {
+  bottom: 394rpx;
+  right: 40rpx;
+}
+
+.full-view-btn {
+  bottom: 242rpx;
+  right: 40rpx;
+}
+
+.full-view-btn-iphoneX {
+  bottom: 266rpx;
+  right: 40rpx;
+}
+
+.tab-bar-iphoneX {
+  width: 100%;
+  height: 68rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hover {
+  background: #f2f2f2;
+}

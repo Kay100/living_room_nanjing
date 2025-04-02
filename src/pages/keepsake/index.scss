@@ -1,0 +1,213 @@
+page {
+  background: #FFFFFF;
+}
+
+.content {
+  padding-top: 226rpx;
+  .keepsake {
+    width: 710rpx;
+    height: 1158rpx;
+    margin: 0 auto;
+    padding: 54rpx 60rpx;
+    box-sizing: border-box;
+    filter: drop-shadow(0 20rpx 50rpx rgba(153, 153, 153, 0.25));
+
+    background-size: 100% 100%;
+    @include image('1673420251334_wrs1ja4y.png');
+    .keepsake-wrapper {
+      padding-top: 40rpx;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16rpx;
+      .keepsake-item {
+        width: 186rpx;
+        height: 186rpx;
+        border-radius: 16rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        background-size: 100%;
+        @include image('1672386265079_BdS1YTpG.png');
+        &.clock {
+          .photo {
+            filter: none;
+            opacity: 1;
+          }
+          .text {
+            display: block;
+          }
+        }
+        .photo {
+          width: 154rpx;
+          height: 154rpx;
+          filter: grayscale(100%);
+          opacity: .4;
+        }
+        .text {
+          width: 100rpx;
+          height: 53rpx;
+          position: absolute;
+          top: 8rpx;
+          right: 8rpx;
+          display: none;
+        }
+      }
+    }
+  }
+  .progress {
+    padding-top: 32rpx;
+    display: flex;
+    gap: 20rpx;
+    .photo {
+      width: 124rpx;
+      height: 152rpx;
+    }
+    .info {
+      padding-top: 28rpx;
+      padding-bottom: 16rpx;
+      font-size: 24rpx;
+      line-height: 40rpx;
+      color: rgba(0, 0, 0, 0.9);
+      .text {
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.9);
+        @include fontFamilyHanSerif();
+      }
+    }
+    .bar {
+      width: 444rpx;
+      height: 12rpx;
+      background: rgba(40, 156, 141, 0.2);
+      border-radius: 12rpx;
+      .bar-value {
+        height: 100%;
+        border-radius: 12rpx;
+        background: linear-gradient(270deg, #32CAB6 2.17%, #17A391 100%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+      }
+    }
+  }
+}
+
+.footer {
+  padding-top: 40rpx;
+  .btn {
+    width: 384rpx;
+    height: 92rpx;
+    line-height: 92rpx;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32rpx;
+    color: #FFFFFF;
+
+    background-size: 100%;
+    @include image('1673507023843_b4eYB7Pc.png');
+    @include fontFamilyHanSerif();
+  }
+}
+
+.source {
+  .bottom {
+    width: 100%;
+    height: 372rpx;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+  .top {
+    width: 542rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .yun {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.dialog-clock-fail {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .dialog-clock-wrapper {
+    width: 640rpx;
+    background-color: #ffffff;
+    font-size: 32rpx;
+    padding: 48rpx;
+    border-radius: 24rpx;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+
+    .dialog-close {
+      width: 32rpx;
+      height: 32rpx;
+      position: absolute;
+      top: 24rpx;
+      right: 24rpx;
+    }
+    .title {
+      padding-top: 16rpx;
+      line-height: 48rpx;
+      margin-bottom: 16rpx;
+      font-weight: 600;
+    }
+    .text {
+      color: rgba(0, 0, 0, 0.6);
+      margin-bottom: 64rpx;
+    }
+    .play-info {
+      max-height: 576rpx;
+      font-size: 32rpx;
+      line-height: 48rpx;
+      margin-bottom: 64rpx;
+      color: rgba(0, 0, 0, 0.6);
+      text-align: left;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: block;
+        width: 8rpx!important;
+      }
+      /* 滚动槽 */
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+      /* 滚动条滑块 */
+      &::-webkit-scrollbar-thumb {
+        border-radius: 4rpx;
+        background: #DCDCDC;
+        opacity: .5;
+      }
+    }
+    .dialog-footer {
+      .btn {
+        height: 80rpx;
+        line-height: 80rpx;
+        border-radius: 114rpx;
+        background: #289c8d;
+        color: #ffffff;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  &.intro {
+    .dialog-clock-wrapper {
+      padding-right: 40rpx;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "pages": [
+    {
+      "path": "pages/launch/index",
+      "style": {
+        "disableScroll": true,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/home/index",
+      "style": {
+        "disableScroll": true,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/walkline/index",
+      "style": {
+        "navigationBarTitleText": "路线规划",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/search/index",
+      "style": {
+        "navigationStyle": "custom",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/about/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/collect/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/webview/index"
+    },
+    {
+      "path": "pages/user/index",
+      "style": {
+        "disableScroll": true,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mystery/index",
+      "style": {
+        "disableScroll": true,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/poi/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/clock/index",
+      "style": {
+        "disableScroll": true,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/clock-detail/index",
+      "style": {
+        "disableScroll": true,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/keepsake/index",
+      "style": {
+        "navigationStyle": "custom",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/grace-card/index",
+      "style": {
+        "disableScroll": true,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/location/index"
+    },
+    {
+      "path": "pages/activity-introduce/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/video-play/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "backgroundColor": "#f7f7f7",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {}
+  },
+  "tabBar": {
+    "custom": true,
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/clock/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mystery/index",
+        "text": "探秘文都"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的文都"
+      }
+    ]
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^tm-(.*)": "@/components/tm-$1/index.vue" // 匹配components目录内的vue文件
+    }
+  },
+  "usingComponts": true,
+  "condition": {
+    // 模式配置，仅开发期间生效
+    "current": 0, // 当前激活的模式(list 的索引项)
+    "list": [
+      {
+        "name": "Guide",
+        "path": "pages/home/index"
+      }
+    ]
+  },
+  "requiredBackgroundModes": ["audio", "location"],
+  "plugins": {
+    "TencentmapAR": {
+      "version": "1.0.5", // 请使用线上最新版本号
+      "provider": "wxc274d3ccfba3cff1"
+    }
+  },
+  "lazyCodeLoading": "requiredComponents"
+}

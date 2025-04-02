@@ -1,0 +1,51 @@
+@import './animate';
+@import './reset';
+@import './mixin';
+@import './layout';
+@import './toast';
+
+page {
+  background: #f6f3ec;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-layer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //noinspection CssInvalidFunction,CssOverwrittenProperties
+  &::after {
+    content: '';
+    height: calc(112rpx + constant(safe-area-inset-bottom));
+    height: calc(112rpx + env(safe-area-inset-bottom));
+    min-height: 178rpx;
+  }
+  .layer-content {
+    flex: auto;
+    position: relative;
+  }
+}
+
+@font-face {
+  font-family: 'HYXinRenWenSong';
+  src: url("https://industry.map.qq.com/cloud/living_room_nanjing/1681387657176_1RAe16Cb.otf");
+}
+@font-face {
+  font-family: 'Source Han Serif CN';
+  src: url('https://industry.map.qq.com/cloud/miniapp/scenic/wisdom/sichou/font/SourceHanSerifCN-Bold.otf');
+}
+
+
+@font-face {
+  font-family: 'SourceHanSerifCNSemiBoldCompress';
+  src: url('https://industry.map.qq.com/cloud/living_room_nanjing/1673405689175_DRmr8PEC.ttf');
+}
+//@font-face {
+//  font-family: 'SourceHanSerifCNSemiBold';
+//  src: url('https://industry.map.qq.com/cloud/living_room_nanjing/SourceHanSerifCN-SemiBold.otf');
+//}
